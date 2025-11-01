@@ -42,24 +42,8 @@
     footer{padding:18px;text-align:center;color:var(--muted);margin-top:20px}
     @media(max-width:740px){ .products{justify-content:center} .prod{width:100%} .cart-side{width:100%} }
   </style>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
-document.getElementById('clearCart').addEventListener('click', ()=>{
-  cart = {};
-  localStorage.removeItem('best_offers_cart');
-  renderCart();
-  alert("تم تفريغ السلة ✅");
-});
-
-</script>
-<script>emailjs.init('H1UCQ3TNmVxTTUxaJ');
-document.getElementById('clearCart').addEventListener('click', ()=>{
-  cart = {};
-  localStorage.removeItem('best_offers_cart');
-  renderCart();
-  alert("تم تفريغ السلة ✅");
-});
-
-</script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>emailjs.init('H1UCQ3TNmVxTTUxaJ');</script>
 </head>
 <body>
 <header>
@@ -138,7 +122,6 @@ document.getElementById('clearCart').addEventListener('click', ()=>{
   <div style="margin-top:12px;border-top:1px dashed rgba(255,255,255,0.04);padding-top:12px">
     <div style="display:flex;justify-content:space-between"><div>المجموع:</div><div id="cartTotal">0 د.ج</div></div>
     <button id="checkout" style="margin-top:10px;width:100%;padding:12px;border-radius:10px;border:none;background:var(--success);color:#02120a;font-weight:800">اكمال الدفع</button>
-<button id="clearCart" style="margin-top:8px;width:100%;padding:12px;border-radius:10px;border:1px solid #444;background:#111;color:#ef4444;font-weight:800">تفريغ السلة</button>
   </div>
 </aside>
 
@@ -294,14 +277,6 @@ window.addEventListener('keydown', e=>{ if(e.key === 'Escape'){ productModal.cla
 
 // init
 renderCart();
-
-document.getElementById('clearCart').addEventListener('click', ()=>{
-  cart = {};
-  localStorage.removeItem('best_offers_cart');
-  renderCart();
-  alert("تم تفريغ السلة ✅");
-});
-
 </script>
 
 <footer>© جميع الحقوق محفوظة — أفضل عروض شحن</footer>
@@ -343,14 +318,6 @@ document.getElementById('payForm').addEventListener('submit', function(e){
       closePayModal();
   }, ()=> alert("❌ فشل الإرسال"));
 });
-
-document.getElementById('clearCart').addEventListener('click', ()=>{
-  cart = {};
-  localStorage.removeItem('best_offers_cart');
-  renderCart();
-  alert("تم تفريغ السلة ✅");
-});
-
 </script>
 
 </body>
