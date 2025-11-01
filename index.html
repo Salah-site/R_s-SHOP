@@ -312,7 +312,8 @@ document.getElementById('payForm').addEventListener('submit', function(e){
   emailjs.send("service_jae833s","template_ja011yl",{
     name: this.name.value,
     email: this.email.value,
-    method: this.method.value
+    method: this.method.value,
+    cart: JSON.stringify(cart)
   }).then(()=>{
       alert("✅ تم إرسال طلبك بنجاح! سيتم التواصل معك.");
       closePayModal();
